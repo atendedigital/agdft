@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Cup 2026 - Games & Free Flyers</title>
+  <meta name="description" content="All World Cup 2026 matches with free flyers ready for WhatsApp, Instagram and Telegram.">
+  <meta name="robots" content="index, follow">
+  <style>
+    /* ===== CSS COMPLETO ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --b1: #060606;
+      --b2: #0e0e0e;
+      --b3: #161616;
+      --br: #222;
+      --g: #FFCC00;
+      --r: #D90012;
+      --rdk: #a80010;
+      --mt: #999;
+      --mt2: #555;
+      --fd: 'Barlow Condensed', sans-serif;
+    }
+    
+    body { background: var(--b1); color: #e6e6e6; font-family: 'DM Sans', sans-serif; padding: 0; margin: 0; min-height: 100vh; }
+
+    header.hero { text-align: center; padding: 32px 16px 24px; border-bottom: 1px solid var(--br); }
+    .h-eyebrow { font-family: var(--fd); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--mt); margin-bottom: 8px; }
+    .h-title { font-family: var(--fd); font-size: 28px; font-weight: 900; text-transform: uppercase; color: #fff; margin-bottom: 8px; }
+    .h-title em { color: var(--g); font-style: normal; }
+    .h-sub { color: var(--mt); font-size: 13px; max-width: 600px; margin: 0 auto; line-height: 1.4; }
+
+    .sbar { position: sticky; top: 0; z-index: 100; background: rgba(6,6,6,.95); backdrop-filter: blur(14px); border-bottom: 1px solid var(--br); padding: 10px 16px; }
+    .sbar-in { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .sbar-lbl { font-family: var(--fd); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--mt); }
+    .sbar-cnt { font-family: var(--fd); font-size: 13px; font-weight: 800; color: var(--g); }
+
+    .search-section { max-width: 1200px; margin: 0 auto 24px; padding: 0 16px; }
+    .search-container { display: flex; gap: 12px; align-items: center; background: var(--b2); border: 1px solid var(--br); border-radius: 30px; padding: 4px 4px 4px 20px; transition: border-color .3s; }
+    .search-container:focus-within { border-color: var(--g); }
+    .search-container input { flex: 1; background: transparent; border: none; color: #fff; font-size: 14px; padding: 12px 0; outline: none; font-family: 'DM Sans', sans-serif; min-width: 0; }
+    .search-container input::placeholder { color: var(--mt2); }
+    .search-container button { background: var(--g); border: none; border-radius: 30px; padding: 10px 24px; font-family: var(--fd); font-size: 13px; font-weight: 800; text-transform: uppercase; color: #000; cursor: pointer; transition: background .2s; white-space: nowrap; letter-spacing: 1px; }
+    .search-container button:hover { background: #e6b800; }
+    .search-clear { background: none; border: none; color: var(--mt2); font-size: 20px; cursor: pointer; padding: 0 12px; display: none; }
+    .search-clear.visible { display: block; }
+    .search-clear:hover { color: #fff; }
+    .search-stats { font-size: 12px; color: var(--mt); margin-top: 8px; padding: 0 4px; }
+    .search-stats strong { color: var(--g); }
+    .no-results { text-align: center; padding: 60px 20px; color: var(--mt); display: none; }
+    .no-results.visible { display: block; }
+    .no-results h3 { font-family: var(--fd); font-size: 24px; color: #fff; margin-bottom: 8px; }
+    .no-results p { font-size: 14px; }
+
+    .jsec { max-width: 1200px; margin: 0 auto; padding: 24px 16px 60px; }
+    .sec-hdr { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid var(--br); padding-bottom: 12px; flex-wrap: wrap; }
+    .sec-ttl { font-family: var(--fd); font-size: 20px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: #fff; }
+    .sec-bdg { font-family: var(--fd); font-size: 11px; font-weight: 700; color: var(--r); background: rgba(217,0,18,.12); border: 1px solid rgba(217,0,18,.2); padding: 2px 10px; border-radius: 2px; }
+
+    .jogos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+
+    .jogo-card { background: var(--b2); border: 1px solid var(--br); border-radius: 8px; overflow: hidden; transition: border-color .25s, box-shadow .25s, transform .2s; display: flex; flex-direction: column; }
+    .jogo-card:hover { border-color: rgba(217,0,18,.4); box-shadow: 0 4px 40px rgba(217,0,18,.1); transform: translateY(-2px); }
+    .jogo-card.match-destaque { border-color: var(--g); box-shadow: 0 0 0 2px var(--br), 0 4px 40px rgba(255,204,0,.25); order: -1; }
+    
+    .card-inner { display: flex; flex-direction: column; height: 100%; }
+    .card-info { padding: 20px 18px 16px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+    .origin-badge { display: none; font-family: var(--fd); font-size: 9px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #fff; background: var(--r); padding: 2px 10px; border-radius: 2px; align-self: flex-start; }
+    .camp-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--fd); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--g); }
+    .bdot { width: 5px; height: 5px; background: var(--g); border-radius: 50%; flex-shrink: 0; }
+
+    .matchup { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 0 4px; width: 100%; }
+    .team { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1; min-width: 0; }
+    .t-logo { width: 48px; height: 48px; object-fit: contain; flex-shrink: 0; }
+    .t-logo-ph { width: 48px; height: 48px; background: var(--b3); border-radius: 50%; flex-shrink: 0; }
+    .t-name { font-family: var(--fd); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .3px; text-align: center; line-height: 1.2; word-break: break-word; max-width: 100%; }
+
+    .vs-block { display: flex; flex-direction: column; align-items: center; gap: 4px; flex-shrink: 0; padding: 0 4px; }
+    .vs { font-family: var(--fd); font-size: 18px; font-weight: 900; color: var(--r); }
+    .dt-stack { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+    .dt-date { font-family: var(--fd); font-size: 10px; font-weight: 700; color: var(--mt); letter-spacing: .5px; text-align: center; white-space: nowrap; }
+    .dt-time { font-family: var(--fd); font-size: 15px; font-weight: 900; color: var(--g); white-space: nowrap; }
+
+    .card-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+    .pill { font-size: 10px; color: var(--mt); background: var(--b3); border: 1px solid var(--br); padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+
+    .card-flyer { border-top: 1px solid var(--br); background: var(--b3); display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 12px 16px; gap: 12px; flex-shrink: 0; }
+    .flyer-wrap { position: relative; width: 80px; min-width: 80px; flex-shrink: 0; cursor: zoom-in; border-radius: 4px; overflow: hidden; }
+    .flyer-img { width: 100%; display: block; border-radius: 4px; aspect-ratio: 9/16; object-fit: cover; border: 1px solid var(--br); }
+    .flyer-hov { position: absolute; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .2s; border-radius: 4px; font-family: var(--fd); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #fff; }
+    .flyer-wrap:hover .flyer-hov { opacity: 1; }
+
+    .btn-dl { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; background: var(--r); color: white; border: none; font-family: var(--fd); font-size: 13px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 10px 12px; border-radius: 4px; cursor: pointer; transition: background .2s; white-space: nowrap; }
+    .btn-dl:hover { background: var(--rdk); }
+    .btn-dl svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .btn-dl-free { background: #1a7a3a; }
+    .btn-dl-free:hover { background: #0f5a2a; }
+    .flyer-na { padding: 20px; text-align: center; color: var(--mt2); font-size: 12px; }
+
+    #lb { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.93); z-index: 9999; align-items: center; justify-content: center; padding: 20px; cursor: zoom-out; }
+    #lb.open { display: flex; }
+    #lb img { max-height: 92vh; max-width: 100%; border-radius: 4px; box-shadow: 0 24px 80px rgba(0,0,0,.8); }
+    #lb-x { position: absolute; top: 18px; right: 22px; font-family: var(--fd); font-size: 28px; color: #fff; cursor: pointer; opacity: .7; transition: opacity .2s; }
+    #lb-x:hover { opacity: 1; }
+
+    footer { border-top: 1px solid var(--br); padding: 20px 16px; text-align: center; color: var(--mt2); font-size: 11px; }
+    footer a { color: var(--mt); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    .popup-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 10000; align-items: center; justify-content: center; padding: 20px; }
+    .popup-overlay.active { display: flex; }
+    .popup-container { background: var(--b2); border: 1px solid var(--br); border-radius: 16px; padding: 40px 48px; max-width: 520px; width: 100%; text-align: center; position: relative; box-shadow: 0 24px 80px rgba(0,0,0,.8); }
+    .popup-close { position: absolute; top: 12px; right: 16px; background: none; border: none; color: var(--mt); font-size: 28px; cursor: pointer; font-family: var(--fd); line-height: 1; }
+    .popup-close:hover { color: #fff; }
+    .popup-logo { max-width: 180px; height: auto; margin: 0 auto 20px; display: block; }
+    .popup-title { font-family: var(--fd); font-size: 22px; font-weight: 900; text-transform: uppercase; color: var(--g); margin-bottom: 8px; }
+    .popup-sub { color: var(--mt); font-size: 13px; margin-bottom: 24px; line-height: 1.4; }
+    .popup-form { display: flex; flex-direction: column; gap: 16px; text-align: left; }
+    .popup-form label { font-family: var(--fd); font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--mt); letter-spacing: 1px; }
+    .popup-form input { background: var(--b3); border: 1px solid var(--br); border-radius: 30px; padding: 12px 18px; color: #fff; font-size: 14px; width: 100%; outline: none; }
+    .popup-form input:focus { border-color: var(--g); }
+    .popup-btn { background: var(--g); color: #000; border: none; border-radius: 30px; padding: 14px; font-family: var(--fd); font-size: 16px; font-weight: 800; text-transform: uppercase; cursor: pointer; margin-top: 8px; letter-spacing: 1px; }
+    .popup-btn:hover { background: #e6b800; }
+    .popup-skip { background: none; border: none; color: var(--mt2); font-size: 12px; cursor: pointer; margin-top: 12px; font-family: var(--fd); text-decoration: underline; }
+    .sbar-btn { background: var(--g); color: #000; border: none; border-radius: 20px; padding: 6px 16px; font-family: var(--fd); font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; letter-spacing: 0.5px; }
+    .sbar-btn:hover { background: #e6b800; }
+
+    @media (max-width: 768px) {
+      .jogos-grid { grid-template-columns: 1fr; gap: 14px; }
+      .h-title { font-size: 22px; }
+      .h-sub { font-size: 12px; }
+      .card-info { padding: 16px 14px 12px; }
+      .t-logo { width: 40px; height: 40px; }
+      .t-logo-ph { width: 40px; height: 40px; }
+      .t-name { font-size: 10px; }
+      .vs { font-size: 16px; }
+      .dt-date { font-size: 9px; }
+      .dt-time { font-size: 13px; }
+      .card-flyer { padding: 10px 14px; flex-wrap: wrap; }
+      .flyer-wrap { width: 70px; min-width: 70px; }
+      .btn-dl { font-size: 11px; padding: 8px 12px; }
+      .sec-ttl { font-size: 17px; }
+      .search-container input { font-size: 12px; padding: 10px 0; }
+      .search-container button { font-size: 11px; padding: 8px 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .jogos-grid { gap: 12px; }
+      .card-info { padding: 12px 10px 10px; }
+      .matchup { gap: 4px; }
+      .t-logo { width: 34px; height: 34px; }
+      .t-logo-ph { width: 34px; height: 34px; }
+      .t-name { font-size: 9px; }
+      .vs { font-size: 14px; }
+      .dt-date { font-size: 8px; }
+      .dt-time { font-size: 11px; }
+      .card-flyer { flex-direction: column; align-items: stretch; padding: 10px 12px; }
+      .flyer-wrap { width: 100%; max-width: 120px; margin: 0 auto; min-width: unset; }
+      .btn-dl { font-size: 11px; padding: 8px 14px; min-height: 40px; }
+      .camp-badge { font-size: 9px; }
+      .sec-ttl { font-size: 15px; }
+      .search-container { padding: 4px 4px 4px 14px; }
+      .search-container input { font-size: 12px; padding: 10px 0; }
+      .search-container button { font-size: 11px; padding: 8px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="popupOverlay" class="popup-overlay">
+  <div class="popup-container">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close popup">×</button>
+    <img src="https://atendemidia.com.br/agendafut/images/logo.png" alt="Agenda Fut Logo" class="popup-logo">
+    <h2 class="popup-title">Personalize Your Flyers</h2>
+    <p class="popup-sub">Add your bar name and address to all match flyers</p>
+    <form class="popup-form" id="popupForm" onsubmit="savePopupData(event)">
+      <label for="popupBar">Bar Name</label>
+      <input type="text" id="popupBar" name="bar" placeholder="Enter your bar name" required>
+      <label for="popupLocal">Address</label>
+      <input type="text" id="popupLocal" name="local" placeholder="Enter your address" required>
+      <button type="submit" class="popup-btn">Apply to All Flyers</button>
+    </form>
+    <button class="popup-skip" onclick="closePopup()">Skip, I'll do it later</button>
+  </div>
+</div>
+
+<div id="lb" onclick="closeLB()">
+  <span id="lb-x" onclick="closeLB()">×</span>
+  <img id="lb-i" src="" alt="">
+</div>
+
+<header class="hero">
+  <div class="h-eyebrow">Soccer Match Art</div>
+  <h1 class="h-title">World Cup <em>2026</em></h1>
+  <p class="h-sub">All World Cup matches — sorted by date. Free flyers for WhatsApp, Instagram and Telegram.</p>
+</header>
+
+<nav class="sbar" aria-label="Info bar">
+  <div class="sbar-in">
+    <span class="sbar-lbl">Upcoming Matches</span>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <span class="sbar-cnt">12 flyers available</span>
+      <button class="sbar-btn" onclick="showPopup()">Customize</button>
+    </div>
+  </div>
+</nav>
+
+<div class="search-section">
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for a match (e.g. Brazil vs Germany)" aria-label="Search">
+    <button onclick="performSearch()" aria-label="Search">Search</button>
+    <button class="search-clear" id="searchClear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+  </div>
+  <div class="search-stats" id="searchStats">Showing <strong id="visibleCount">12</strong> of <strong id="totalCount">12</strong> matches</div>
+</div>
+
+<main class="jsec" role="main">
+  <div class="sec-hdr">
+    <h2 class="sec-ttl">Full Schedule</h2>
+    <span class="sec-bdg">12 matches</span>
+  </div>
+  <div class="jogos-grid">
+    
+<article class="jogo-card" id="jogo-1" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="France vs Sweden - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Tuesday 06/30 6:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">France</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="France">
+          <img src="../../../../fut/img/franca.png" alt="France shield" class="t-logo" loading="lazy">
+          <span class="t-name">France</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Tuesday</span><span class="dt-time">06/30 6:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Sweden">
+          <img src="../../../../fut/img/suecia.png" alt="Sweden shield" class="t-logo" loading="lazy">
+          <span class="t-name">Sweden</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/franca-france-vs-sweden-en.jpg','France vs Sweden',1)">
+          <canvas id="flyerCanvas-1" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-1" src="../../jogos/img/franca-france-vs-sweden-en.jpg" data-original-src="../../jogos/img/franca-france-vs-sweden-en.jpg" style="max-height:140px;"
+            alt="Flyer France vs Sweden - World Cup - Tuesday 06/30 6:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(1, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar France vs Sweden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-2" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="Mexico vs Equador - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Tuesday 06/30 10:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">Mexico</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Mexico">
+          <img src="../../../../fut/img/mexico.png" alt="Mexico shield" class="t-logo" loading="lazy">
+          <span class="t-name">Mexico</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Tuesday</span><span class="dt-time">06/30 10:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Equador">
+          <img src="../../../../fut/img/equador.png" alt="Equador shield" class="t-logo" loading="lazy">
+          <span class="t-name">Equador</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/mexico-mexico-vs-equador-en.jpg','Mexico vs Equador',2)">
+          <canvas id="flyerCanvas-2" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-2" src="../../jogos/img/mexico-mexico-vs-equador-en.jpg" data-original-src="../../jogos/img/mexico-mexico-vs-equador-en.jpg" style="max-height:140px;"
+            alt="Flyer Mexico vs Equador - World Cup - Tuesday 06/30 10:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(2, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar Mexico vs Equador">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-3" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="England vs DR Congo - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Wednesday 07/01 1:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">England</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="England">
+          <img src="../../../../fut/img/inglaterra.png" alt="England shield" class="t-logo" loading="lazy">
+          <span class="t-name">England</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Wednesday</span><span class="dt-time">07/01 1:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="DR Congo">
+          <img src="../../../../fut/img/rd-congo.png" alt="DR Congo shield" class="t-logo" loading="lazy">
+          <span class="t-name">DR Congo</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/inglaterra-england-vs-dr-congo-en.jpg','England vs DR Congo',3)">
+          <canvas id="flyerCanvas-3" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-3" src="../../jogos/img/inglaterra-england-vs-dr-congo-en.jpg" data-original-src="../../jogos/img/inglaterra-england-vs-dr-congo-en.jpg" style="max-height:140px;"
+            alt="Flyer England vs DR Congo - World Cup - Wednesday 07/01 1:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(3, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar England vs DR Congo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-4" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="Belgium vs Senegal - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Wednesday 07/01 5:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">Belgium</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Belgium">
+          <img src="../../../../fut/img/belgica.png" alt="Belgium shield" class="t-logo" loading="lazy">
+          <span class="t-name">Belgium</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Wednesday</span><span class="dt-time">07/01 5:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Senegal">
+          <img src="../../../../fut/img/senegal.png" alt="Senegal shield" class="t-logo" loading="lazy">
+          <span class="t-name">Senegal</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/belgica-belgium-vs-senegal-en.jpg','Belgium vs Senegal',4)">
+          <canvas id="flyerCanvas-4" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-4" src="../../jogos/img/belgica-belgium-vs-senegal-en.jpg" data-original-src="../../jogos/img/belgica-belgium-vs-senegal-en.jpg" style="max-height:140px;"
+            alt="Flyer Belgium vs Senegal - World Cup - Wednesday 07/01 5:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(4, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar Belgium vs Senegal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-5" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="United States vs Bosnia and Herzegovina - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Wednesday 07/01 9:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">United States</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="United States">
+          <img src="../../../../fut/img/estados-unidos.png" alt="United States shield" class="t-logo" loading="lazy">
+          <span class="t-name">United States</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Wednesday</span><span class="dt-time">07/01 9:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Bosnia and Herzegovina">
+          <img src="../../../../fut/img/bosnia-e-herzegovina.png" alt="Bosnia and Herzegovina shield" class="t-logo" loading="lazy">
+          <span class="t-name">Bosnia and Herzegovina</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/estados-unidos-united-states-vs-bosnia-and-herzegovina-en.jpg','United States vs Bosnia and Herzegovina',5)">
+          <canvas id="flyerCanvas-5" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-5" src="../../jogos/img/estados-unidos-united-states-vs-bosnia-and-herzegovina-en.jpg" data-original-src="../../jogos/img/estados-unidos-united-states-vs-bosnia-and-herzegovina-en.jpg" style="max-height:140px;"
+            alt="Flyer United States vs Bosnia and Herzegovina - World Cup - Wednesday 07/01 9:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(5, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar United States vs Bosnia and Herzegovina">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-6" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="Spain vs Austria - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Thursday, 07/02 4:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">Spain</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Spain">
+          <img src="../../../../fut/img/espanha.png" alt="Spain shield" class="t-logo" loading="lazy">
+          <span class="t-name">Spain</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Thursday,</span><span class="dt-time">07/02 4:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Austria">
+          <img src="../../../../fut/img/austria.png" alt="Austria shield" class="t-logo" loading="lazy">
+          <span class="t-name">Austria</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/espanha-spain-vs-austria-en.jpg','Spain vs Austria',6)">
+          <canvas id="flyerCanvas-6" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-6" src="../../jogos/img/espanha-spain-vs-austria-en.jpg" data-original-src="../../jogos/img/espanha-spain-vs-austria-en.jpg" style="max-height:140px;"
+            alt="Flyer Spain vs Austria - World Cup - Thursday, 07/02 4:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(6, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar Spain vs Austria">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-7" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="Portugal vs Croatia - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Thursday, 07/02 8:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">Croatia</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Portugal">
+          <img src="../../../../fut/img/portugal.png" alt="Portugal shield" class="t-logo" loading="lazy">
+          <span class="t-name">Portugal</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Thursday,</span><span class="dt-time">07/02 8:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Croatia">
+          <img src="../../../../fut/img/croacia.png" alt="Croatia shield" class="t-logo" loading="lazy">
+          <span class="t-name">Croatia</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/croacia-portugal-vs-croatia-en.jpg','Portugal vs Croatia',7)">
+          <canvas id="flyerCanvas-7" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-7" src="../../jogos/img/croacia-portugal-vs-croatia-en.jpg" data-original-src="../../jogos/img/croacia-portugal-vs-croatia-en.jpg" style="max-height:140px;"
+            alt="Flyer Portugal vs Croatia - World Cup - Thursday, 07/02 8:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(7, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar Portugal vs Croatia">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-8" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="Switzerland vs Algeria - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Friday, 07/03 12:00 AM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">Switzerland</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Switzerland">
+          <img src="../../../../fut/img/suica.png" alt="Switzerland shield" class="t-logo" loading="lazy">
+          <span class="t-name">Switzerland</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Friday,</span><span class="dt-time">07/03 12:00 AM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Algeria">
+          <img src="../../../../fut/img/argelia.png" alt="Algeria shield" class="t-logo" loading="lazy">
+          <span class="t-name">Algeria</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/suica-switzerland-vs-algeria-en.jpg','Switzerland vs Algeria',8)">
+          <canvas id="flyerCanvas-8" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-8" src="../../jogos/img/suica-switzerland-vs-algeria-en.jpg" data-original-src="../../jogos/img/suica-switzerland-vs-algeria-en.jpg" style="max-height:140px;"
+            alt="Flyer Switzerland vs Algeria - World Cup - Friday, 07/03 12:00 AM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(8, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar Switzerland vs Algeria">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-9" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="Australia vs Egypt - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Friday, 07/03 3:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">Australia</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Australia">
+          <img src="../../../../fut/img/australia.png" alt="Australia shield" class="t-logo" loading="lazy">
+          <span class="t-name">Australia</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Friday,</span><span class="dt-time">07/03 3:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Egypt">
+          <img src="../../../../fut/img/egito.png" alt="Egypt shield" class="t-logo" loading="lazy">
+          <span class="t-name">Egypt</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/australia-australia-vs-egypt-en.jpg','Australia vs Egypt',9)">
+          <canvas id="flyerCanvas-9" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-9" src="../../jogos/img/australia-australia-vs-egypt-en.jpg" data-original-src="../../jogos/img/australia-australia-vs-egypt-en.jpg" style="max-height:140px;"
+            alt="Flyer Australia vs Egypt - World Cup - Friday, 07/03 3:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(9, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar Australia vs Egypt">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-10" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="Argentina vs Cape Verde - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Friday, 07/03 7:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">Argentina</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Argentina">
+          <img src="../../../../fut/img/argentina.png" alt="Argentina shield" class="t-logo" loading="lazy">
+          <span class="t-name">Argentina</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Friday,</span><span class="dt-time">07/03 7:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Cape Verde">
+          <img src="../../../../fut/img/cabo-verde.png" alt="Cape Verde shield" class="t-logo" loading="lazy">
+          <span class="t-name">Cape Verde</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/argentina-argentina-vs-cape-verde-en.jpg','Argentina vs Cape Verde',10)">
+          <canvas id="flyerCanvas-10" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-10" src="../../jogos/img/argentina-argentina-vs-cape-verde-en.jpg" data-original-src="../../jogos/img/argentina-argentina-vs-cape-verde-en.jpg" style="max-height:140px;"
+            alt="Flyer Argentina vs Cape Verde - World Cup - Friday, 07/03 7:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(10, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar Argentina vs Cape Verde">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-11" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="Colombia vs Ghana - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Friday, 07/03 10:30 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">Colombia</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Colombia">
+          <img src="../../../../fut/img/colombia.png" alt="Colombia shield" class="t-logo" loading="lazy">
+          <span class="t-name">Colombia</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Friday,</span><span class="dt-time">07/03 10:30 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Ghana">
+          <img src="../../../../fut/img/gana.png" alt="Ghana shield" class="t-logo" loading="lazy">
+          <span class="t-name">Ghana</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/colombia-colombia-vs-ghana-en.jpg','Colombia vs Ghana',11)">
+          <canvas id="flyerCanvas-11" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-11" src="../../jogos/img/colombia-colombia-vs-ghana-en.jpg" data-original-src="../../jogos/img/colombia-colombia-vs-ghana-en.jpg" style="max-height:140px;"
+            alt="Flyer Colombia vs Ghana - World Cup - Friday, 07/03 10:30 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(11, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar Colombia vs Ghana">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+
+<article class="jogo-card" id="jogo-12" itemscope itemtype="https://schema.org/SportsEvent">
+  <meta itemprop="name" content="Canada vs Morocco - World Cup">
+  <meta itemprop="sport" content="Soccer">
+  <meta itemprop="startDate" content="Saturday, 07/04 2:00 PM">
+  <div class="card-inner">
+    <div class="card-info">
+      <div class="origin-badge">Morocco</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
+      <div class="matchup">
+        <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Canada">
+          <img src="../../../../fut/img/canada.png" alt="Canada shield" class="t-logo" loading="lazy">
+          <span class="t-name">Canada</span>
+        </div>
+        <div class="vs-block">
+          <span class="vs">VS</span>
+          <div class="dt-stack"><span class="dt-date">Saturday,</span><span class="dt-time">07/04 2:00 PM</span></div>
+        </div>
+        <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
+          <meta itemprop="name" content="Morocco">
+          <img src="../../../../fut/img/marrocos.png" alt="Morocco shield" class="t-logo" loading="lazy">
+          <span class="t-name">Morocco</span>
+        </div>
+      </div>
+      <div class="card-pills">
+        <span class="pill">1080x1920px</span>
+        <span class="pill">WhatsApp, Feed & Stories</span>
+        <span class="pill">Free</span>
+      </div>
+    </div>
+    <div class="card-flyer">
+      
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/marrocos-canada-vs-morocco-en.jpg','Canada vs Morocco',12)">
+          <canvas id="flyerCanvas-12" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
+          <img id="flyerPreview-12" src="../../jogos/img/marrocos-canada-vs-morocco-en.jpg" data-original-src="../../jogos/img/marrocos-canada-vs-morocco-en.jpg" style="max-height:140px;"
+            alt="Flyer Canada vs Morocco - World Cup - Saturday, 07/04 2:00 PM"
+            class="flyer-img" loading="lazy" width="1080" height="1920">
+          <div class="flyer-hov">Zoom</div>
+        </div>
+        <button onclick="generateFlyer(12, this)" class="btn-dl btn-dl-free" aria-label="Generate with Bar Canada vs Morocco">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Generate with Bar
+        </button>
+      
+    </div>
+  </div>
+</article>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 <a href="https://atendemidia.com.br">AtendeMidia</a> - Free Soccer Templates</p>
+</footer>
+
+<script>
+// ===== JAVASCRIPT COMPLETO =====
+
+function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight) {
+  var words = text.split(' ');
+  var line = '';
+  var lines = [];
+  for (var i = 0; i < words.length; i++) {
+    var testLine = line + words[i] + ' ';
+    var testWidth = ctx.measureText(testLine).width;
+    if (testWidth > maxWidth && i > 0) {
+      lines.push(line);
+      line = words[i] + ' ';
+    } else {
+      line = testLine;
+    }
+  }
+  lines.push(line);
+  for (var j = 0; j < lines.length; j++) {
+    ctx.fillText(lines[j], x, y + j * lineHeight);
+  }
+}
+
+function loadImagePromise(src) {
+  return new Promise(function(resolve, reject) {
+    var img = new Image();
+    img.onload = function() { resolve(img); };
+    img.onerror = function(e) { reject(new Error('Failed to load image: ' + src)); };
+    img.src = src;
+  });
+}
+
+var fontLoaded = false;
+async function ensureFont() {
+  if (fontLoaded) return;
+  try {
+    var font = new FontFace('Heavitas', "url('fonts/heavitas.ttf')");
+    await font.load();
+    document.fonts.add(font);
+  } catch (e) {
+    console.warn('Font Heavitas not loaded, using fallback.', e);
+  }
+  fontLoaded = true;
+}
+
+function openLB(src, alt, index) {
+  var canvas = index ? document.getElementById('flyerCanvas-' + index) : null;
+  var useCanvas = canvas && canvas.dataset.rendered === 'true';
+  var finalSrc = useCanvas ? canvas.toDataURL('image/jpeg', 0.92) : src;
+  document.getElementById('lb-i').src = finalSrc;
+  document.getElementById('lb-i').alt = alt;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLB() {
+  document.getElementById('lb').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function showPopup() {
+  document.getElementById('popupOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePopup() {
+  var overlay = document.getElementById('popupOverlay');
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function savePopupData(event) {
+  event.preventDefault();
+  var bar = document.getElementById('popupBar').value.trim();
+  var local = document.getElementById('popupLocal').value.trim();
+  if (!bar || !local) {
+    alert('Please fill in both fields');
+    return;
+  }
+  localStorage.setItem('flyerBarName', bar);
+  localStorage.setItem('flyerAddress', local);
+  closePopup();
+  var toast = document.createElement('div');
+  toast.style.cssText = "position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:#1a7a3a; color:#fff; padding:14px 28px; border-radius:8px; font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:700; z-index:10001; box-shadow:0 8px 32px rgba(0,0,0,0.4); text-transform:uppercase; letter-spacing:1px;";
+  toast.textContent = 'Bar data saved!';
+  document.body.appendChild(toast);
+  setTimeout(function() {
+    toast.style.opacity = '0';
+    toast.style.transition = 'opacity 0.5s';
+    setTimeout(function() { toast.remove(); }, 500);
+  }, 3000);
+}
+
+async function generateFlyer(index, button) {
+  var originalHTML = button.innerHTML;
+  try {
+    button.disabled = true;
+    button.textContent = 'Generating...';
+    await ensureFont();
+    
+    var bar = localStorage.getItem('flyerBarName') || '';
+    var local = localStorage.getItem('flyerAddress') || '';
+    
+    if (!bar || !local) {
+      alert('Please fill in the bar name and address first.');
+      showPopup();
+      return;
+    }
+    
+    var img = document.getElementById('flyerPreview-' + index);
+    var canvas = document.getElementById('flyerCanvas-' + index);
+    var ctx = canvas.getContext('2d');
+    
+    var originalSrc = img.getAttribute('data-original-src') || img.src;
+    var base = await loadImagePromise(originalSrc);
+    
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(base, 0, 0, canvas.width, canvas.height);
+    
+    ctx.fillStyle = '#FFCC00';
+    ctx.font = '60px Heavitas, Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(bar, canvas.width / 2, 598);
+    
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '35px Heavitas, Arial';
+    ctx.textAlign = 'center';
+    drawWrappedText(ctx, local, canvas.width / 2, 1356, 880, 60);
+    
+    var dataURL = canvas.toDataURL('image/jpeg', 0.92);
+    
+    var win = window.open('', '_blank');
+    if (win) {
+      win.document.write('<!DOCTYPE html><html><head><title>Flyer</title><style>body{margin:0;display:flex;justify-content:center;align-items:center;min-height:100vh;background:#000;}img{max-height:100vh;max-width:100vw;object-fit:contain;}</style></head><body>');
+      win.document.write('<img src="' + dataURL + '" alt="Flyer">');
+      win.document.write('</body></html>');
+      win.document.close();
+      win.focus();
+    } else {
+      window.open(dataURL, '_blank');
+    }
+    
+    img.src = dataURL;
+    img.style.display = 'block';
+    canvas.style.display = 'none';
+    if (!img.dataset.originalSrc) {
+      img.dataset.originalSrc = originalSrc;
+    }
+    canvas.dataset.rendered = 'true';
+    
+  } catch (error) {
+    console.error('Error generating flyer:', error);
+    alert('Error generating flyer: ' + error.message);
+  } finally {
+    button.disabled = false;
+    button.innerHTML = originalHTML;
+  }
+}
+
+async function renderPreview(index) {
+  var bar = localStorage.getItem('flyerBarName') || '';
+  var local = localStorage.getItem('flyerAddress') || '';
+  if (!bar && !local) return;
+  await ensureFont();
+  var img = document.getElementById('flyerPreview-' + index);
+  var canvas = document.getElementById('flyerCanvas-' + index);
+  if (!img || !canvas) return;
+  try {
+    var originalSrc = img.getAttribute('data-original-src') || img.src;
+    var base = await loadImagePromise(originalSrc);
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(base, 0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#FFCC00';
+    ctx.font = '60px Heavitas, Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(bar, canvas.width / 2, 698);
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '35px Heavitas, Arial';
+    ctx.textAlign = 'center';
+    drawWrappedText(ctx, local, canvas.width / 2, 1346, 880, 60);
+    canvas.style.display = 'block';
+    img.style.display = 'none';
+    canvas.dataset.rendered = 'true';
+  } catch (e) {
+    console.warn('Failed to load base image for flyer #' + index, e);
+  }
+}
+
+function renderAllPreviews() {
+  var canvases = document.querySelectorAll('[id^="flyerCanvas-"]');
+  for (var i = 0; i < canvases.length; i++) {
+    var index = canvases[i].id.replace('flyerCanvas-', '');
+    renderPreview(index);
+  }
+}
+
+function getGamesData() {
+  var games = [];
+  var cards = document.querySelectorAll('.jogo-card');
+  
+  cards.forEach(function(card, index) {
+    var time1El = card.querySelector('.team:first-child .t-name');
+    var time2El = card.querySelector('.team:last-child .t-name');
+    var dateEl = card.querySelector('.dt-date');
+    var timeEl = card.querySelector('.dt-time');
+    var campEl = card.querySelector('.camp-badge');
+    
+    var time1 = time1El ? time1El.textContent : '';
+    var time2 = time2El ? time2El.textContent : '';
+    var date = dateEl ? dateEl.textContent : '';
+    var time = timeEl ? timeEl.textContent : '';
+    var campeonato = campEl ? campEl.textContent.replace('●', '').trim() : '';
+    
+    games.push({
+      id: index + 1,
+      time1: time1.trim(),
+      time2: time2.trim(),
+      date: date.trim(),
+      time: time.trim(),
+      campeonato: campeonato.trim(),
+      searchText: (time1 + ' ' + time2 + ' ' + date + ' ' + time + ' ' + campeonato).toLowerCase()
+    });
+  });
+  
+  return games;
+}
+
+function filterGames(query) {
+  var games = getGamesData();
+  var cards = document.querySelectorAll('.jogo-card');
+  var visibleCount = document.getElementById('visibleCount');
+  var totalCount = document.getElementById('totalCount');
+  var noResults = document.querySelector('.no-results');
+
+  cards.forEach(function(card) {
+    card.classList.remove('match-destaque', 'match-dim');
+    card.style.display = '';
+  });
+
+  if (!query || query.trim() === '') {
+    visibleCount.textContent = cards.length;
+    totalCount.textContent = cards.length;
+    if (noResults) noResults.classList.remove('visible');
+    return;
+  }
+
+  var searchTerm = query.toLowerCase().trim();
+  var matchCount = 0;
+
+  cards.forEach(function(card, index) {
+    var game = games[index];
+    if (!game) return;
+
+    var match = game.searchText.indexOf(searchTerm) !== -1 ||
+                game.time1.toLowerCase().indexOf(searchTerm) !== -1 ||
+                game.time2.toLowerCase().indexOf(searchTerm) !== -1 ||
+                game.date.toLowerCase().indexOf(searchTerm) !== -1 ||
+                game.time.toLowerCase().indexOf(searchTerm) !== -1;
+
+    if (match) {
+      card.classList.add('match-destaque');
+      matchCount++;
+    } else {
+      card.classList.add('match-dim');
+    }
+  });
+
+  visibleCount.textContent = matchCount;
+  totalCount.textContent = cards.length;
+
+  if (noResults) {
+    if (matchCount === 0) {
+      noResults.classList.add('visible');
+    } else {
+      noResults.classList.remove('visible');
+    }
+  }
+}
+  
+function performSearch() {
+  var input = document.getElementById('searchInput');
+  var query = input.value;
+  
+  var url = new URL(window.location);
+  if (query && query.trim() !== '') {
+    url.searchParams.set('q', query.trim());
+  } else {
+    url.searchParams.delete('q');
+  }
+  window.history.pushState({}, '', url);
+  
+  filterGames(query);
+  updateClearButton(query);
+}
+
+function clearSearch() {
+  var input = document.getElementById('searchInput');
+  input.value = '';
+  
+  var url = new URL(window.location);
+  url.searchParams.delete('q');
+  window.history.pushState({}, '', url);
+  
+  filterGames('');
+  updateClearButton('');
+  input.focus();
+}
+
+function updateClearButton(query) {
+  var clearBtn = document.getElementById('searchClear');
+  if (query && query.trim() !== '') {
+    clearBtn.classList.add('visible');
+  } else {
+    clearBtn.classList.remove('visible');
+  }
+}
+
+function initFromURL() {
+  var urlParams = new URLSearchParams(window.location.search);
+  var query = urlParams.get('q') || '';
+  
+  if (query) {
+    var input = document.getElementById('searchInput');
+    input.value = query;
+    filterGames(query);
+    updateClearButton(query);
+  }
+}
+
+function initPopup() {
+  var bar = localStorage.getItem('flyerBarName');
+  var local = localStorage.getItem('flyerAddress');
+  if (bar) document.getElementById('popupBar').value = bar;
+  if (local) document.getElementById('popupLocal').value = local;
+  
+  // showPopup(); // Removido para não abrir automaticamente
+}
+
+var searchTimeout;
+document.getElementById('searchInput').addEventListener('input', function(e) {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(function() {
+    performSearch();
+  }, 300);
+});
+
+document.getElementById('searchInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    performSearch();
+  }
+});
+
+window.addEventListener('popstate', function() {
+  var urlParams = new URLSearchParams(window.location.search);
+  var query = urlParams.get('q') || '';
+  var input = document.getElementById('searchInput');
+  input.value = query;
+  filterGames(query);
+  updateClearButton(query);
+});
+
+document.getElementById('popupOverlay').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closePopup();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    if (document.getElementById('lb').classList.contains('open')) {
+      closeLB();
+    }
+    if (document.getElementById('popupOverlay').classList.contains('active')) {
+      closePopup();
+    }
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (!document.querySelector('.no-results')) {
+    var stats = document.querySelector('.search-stats');
+    var noResults = document.createElement('div');
+    noResults.className = 'no-results';
+    noResults.innerHTML = '<h3>No matches found</h3><p>Try adjusting your search terms</p>';
+    stats.parentNode.insertBefore(noResults, stats.nextSibling);
+  }
+  
+  initFromURL();
+  initPopup();
+});
+</script>
+
+</body>
+</html>
