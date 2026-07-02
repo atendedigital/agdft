@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendario de la Copa Mundial 2026 - Mira Todos los Partidos</title>
-  <meta name="description" content="Calendario completo de la Copa Mundial 2026 con todos los partidos, fechas y horarios. ¡Mira todos los partidos en vivo! Descarga flyers personalizados para tu bar.">
+  <title>World Cup</title>
+  <meta name="description" content="Schedule">
   <meta name="robots" content="index, follow">
   <style>
     /* ===== CSS COMPLETO ===== */
@@ -207,84 +207,84 @@
 </div>
 
 <header class="hero">
-  <div class="h-eyebrow">CALENDARIO GRATUITO DE LA COPA MUNDIAL</div>
-  <h1 class="h-title">Copa Mundial <em>2026</em></h1>
-  <p class="h-sub">Calendario completo con todos los partidos, fechas y horarios. Descarga flyers personalizados para tu bar — 100% gratis.</p>
+  <div class="h-eyebrow">FREE SCHEDULE</div>
+  <h1 class="h-title">World Cup <em>2026</em></h1>
+  <p class="h-sub"></p>
 </header>
 
 <nav class="sbar" aria-label="Info bar">
   <div class="sbar-in">
-    <span class="sbar-lbl">TOTAL DE PARTIDOS</span>
+    <span class="sbar-lbl">MATCHES</span>
     <div style="display:flex; gap:12px; align-items:center;">
-      <span class="sbar-cnt">11 partidos</span>
-      <button class="sbar-btn" onclick="openPopup()">Personalizar con mi bar</button>
+      <span class="sbar-cnt">11 matches</span>
+      <button class="sbar-btn" onclick="openPopup()">Customize</button>
     </div>
   </div>
 </nav>
 
 <div class="search-section">
   <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Busca por equipo, fecha o campeonato..." aria-label="Search">
-    <button onclick="performSearch()" aria-label="Search">Buscar</button>
+    <input type="text" id="searchInput" placeholder="Search..." aria-label="Search">
+    <button onclick="performSearch()" aria-label="Search">Search</button>
     <button class="search-clear" id="searchClear" onclick="clearSearch()" aria-label="Clear search">✕</button>
   </div>
-  <div class="search-stats" id="searchStats">Mostrando <strong id="visibleCount">11</strong> de <strong id="totalCount">11</strong> partidos</div>
+  <div class="search-stats" id="searchStats">Showing <strong id="visibleCount">11</strong> of <strong id="totalCount">11</strong> matches</div>
 </div>
 
 <main class="jsec" role="main">
   <div class="sec-hdr">
     <div class="sec-hdr-left">
-      <h2 class="sec-ttl">Calendario Completo</h2>
-      <span class="sec-bdg">11 partidos</span>
+      <h2 class="sec-ttl">Schedule</h2>
+      <span class="sec-bdg">11 matches</span>
     </div>
-    <button class="btn-dl-all" id="btnDownloadAll" onclick="downloadAllFlyers()">Descargar Todos</button>
+    <button class="btn-dl-all" id="btnDownloadAll" onclick="downloadAllFlyers()">تحميل الكل</button>
   </div>
   <div class="jogos-grid">
     
 <article class="jogo-card" id="jogo-1" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="España vs Austria - Copa Mundial">
+  <meta itemprop="name" content="Espanha vs Áustria - World Cup">
   <meta itemprop="sport" content="Soccer">
-  <meta itemprop="startDate" content="JUEVES 02/07 16:00">
+  <meta itemprop="startDate" content="QUINTA 02/07 16:00">
   <div class="card-inner">
     <div class="card-info">
-      <div class="origin-badge">España</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="origin-badge">Espanha</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="España">
-          <img src="../../fut/img/espanha.png" alt="España shield" class="t-logo" loading="lazy">
-          <span class="t-name">España</span>
+          <meta itemprop="name" content="Espanha">
+          <img src="../../fut/img/espanha.png" alt="Espanha shield" class="t-logo" loading="lazy">
+          <span class="t-name">Espanha</span>
         </div>
         <div class="vs-block">
           <span class="vs">VS</span>
-          <div class="dt-stack"><span class="dt-date">JUEVES</span><span class="dt-time">02/07 16:00</span></div>
+          <div class="dt-stack"><span class="dt-date">QUINTA</span><span class="dt-time">02/07 16:00</span></div>
         </div>
         <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Austria">
-          <img src="../../fut/img/austria.png" alt="Austria shield" class="t-logo" loading="lazy">
-          <span class="t-name">Austria</span>
+          <meta itemprop="name" content="Áustria">
+          <img src="../../fut/img/austria.png" alt="Áustria shield" class="t-logo" loading="lazy">
+          <span class="t-name">Áustria</span>
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/espanha-espana-vs-austria-es.jpg','España vs Austria',1)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/espanha-espanha-vs-austria-ar.jpg','Espanha vs Áustria',1)">
           <canvas id="flyerCanvas-1" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-1" src="../../jogos/img/espanha-espana-vs-austria-es.jpg" data-original-src="../../jogos/img/espanha-espana-vs-austria-es.jpg" style="max-height:140px;"
-            alt="Flyer España vs Austria - Copa Mundial - JUEVES 02/07 16:00"
+          <img id="flyerPreview-1" src="../../jogos/img/espanha-espanha-vs-austria-ar.jpg" data-original-src="../../jogos/img/espanha-espanha-vs-austria-ar.jpg" style="max-height:140px;"
+            alt="Flyer Espanha vs Áustria - World Cup - QUINTA 02/07 16:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(1, this)" aria-label="Generar con Bar España vs Austria">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(1, this)" aria-label="Generate with Bar Espanha vs Áustria">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -292,13 +292,13 @@
 </article>
 
 <article class="jogo-card" id="jogo-2" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="Portugal vs Croacia - Copa Mundial">
+  <meta itemprop="name" content="Portugal vs Croácia - World Cup">
   <meta itemprop="sport" content="Soccer">
-  <meta itemprop="startDate" content="JUEVES 02/07 20:00">
+  <meta itemprop="startDate" content="QUINTA 02/07 20:00">
   <div class="card-inner">
     <div class="card-info">
       <div class="origin-badge">Croacia</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
           <meta itemprop="name" content="Portugal">
@@ -307,34 +307,34 @@
         </div>
         <div class="vs-block">
           <span class="vs">VS</span>
-          <div class="dt-stack"><span class="dt-date">JUEVES</span><span class="dt-time">02/07 20:00</span></div>
+          <div class="dt-stack"><span class="dt-date">QUINTA</span><span class="dt-time">02/07 20:00</span></div>
         </div>
         <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Croacia">
-          <img src="../../fut/img/croacia.png" alt="Croacia shield" class="t-logo" loading="lazy">
-          <span class="t-name">Croacia</span>
+          <meta itemprop="name" content="Croácia">
+          <img src="../../fut/img/croacia.png" alt="Croácia shield" class="t-logo" loading="lazy">
+          <span class="t-name">Croácia</span>
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/croacia-portugal-vs-croacia-es.jpg','Portugal vs Croacia',2)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/croacia-portugal-vs-croacia-ar.jpg','Portugal vs Croácia',2)">
           <canvas id="flyerCanvas-2" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-2" src="../../jogos/img/croacia-portugal-vs-croacia-es.jpg" data-original-src="../../jogos/img/croacia-portugal-vs-croacia-es.jpg" style="max-height:140px;"
-            alt="Flyer Portugal vs Croacia - Copa Mundial - JUEVES 02/07 20:00"
+          <img id="flyerPreview-2" src="../../jogos/img/croacia-portugal-vs-croacia-ar.jpg" data-original-src="../../jogos/img/croacia-portugal-vs-croacia-ar.jpg" style="max-height:140px;"
+            alt="Flyer Portugal vs Croácia - World Cup - QUINTA 02/07 20:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(2, this)" aria-label="Generar con Bar Portugal vs Croacia">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(2, this)" aria-label="Generate with Bar Portugal vs Croácia">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -342,49 +342,49 @@
 </article>
 
 <article class="jogo-card" id="jogo-3" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="Suiza vs Argelia - Copa Mundial">
+  <meta itemprop="name" content="Suíça vs Argélia - World Cup">
   <meta itemprop="sport" content="Soccer">
-  <meta itemprop="startDate" content="VIERNES 03/07 00:00">
+  <meta itemprop="startDate" content="SEXTA 03/07 00:00">
   <div class="card-inner">
     <div class="card-info">
-      <div class="origin-badge">Suiza</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="origin-badge">Suica</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Suiza">
-          <img src="../../fut/img/suica.png" alt="Suiza shield" class="t-logo" loading="lazy">
-          <span class="t-name">Suiza</span>
+          <meta itemprop="name" content="Suíça">
+          <img src="../../fut/img/suica.png" alt="Suíça shield" class="t-logo" loading="lazy">
+          <span class="t-name">Suíça</span>
         </div>
         <div class="vs-block">
           <span class="vs">VS</span>
-          <div class="dt-stack"><span class="dt-date">VIERNES</span><span class="dt-time">03/07 00:00</span></div>
+          <div class="dt-stack"><span class="dt-date">SEXTA</span><span class="dt-time">03/07 00:00</span></div>
         </div>
         <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Argelia">
-          <img src="../../fut/img/argelia.png" alt="Argelia shield" class="t-logo" loading="lazy">
-          <span class="t-name">Argelia</span>
+          <meta itemprop="name" content="Argélia">
+          <img src="../../fut/img/argelia.png" alt="Argélia shield" class="t-logo" loading="lazy">
+          <span class="t-name">Argélia</span>
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/suica-suiza-vs-argelia-es.jpg','Suiza vs Argelia',3)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/suica-suica-vs-argelia-ar.jpg','Suíça vs Argélia',3)">
           <canvas id="flyerCanvas-3" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-3" src="../../jogos/img/suica-suiza-vs-argelia-es.jpg" data-original-src="../../jogos/img/suica-suiza-vs-argelia-es.jpg" style="max-height:140px;"
-            alt="Flyer Suiza vs Argelia - Copa Mundial - VIERNES 03/07 00:00"
+          <img id="flyerPreview-3" src="../../jogos/img/suica-suica-vs-argelia-ar.jpg" data-original-src="../../jogos/img/suica-suica-vs-argelia-ar.jpg" style="max-height:140px;"
+            alt="Flyer Suíça vs Argélia - World Cup - SEXTA 03/07 00:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(3, this)" aria-label="Generar con Bar Suiza vs Argelia">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(3, this)" aria-label="Generate with Bar Suíça vs Argélia">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -392,49 +392,49 @@
 </article>
 
 <article class="jogo-card" id="jogo-4" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="Australia vs Egipto - Copa Mundial">
+  <meta itemprop="name" content="Austrália vs Egito - World Cup">
   <meta itemprop="sport" content="Soccer">
-  <meta itemprop="startDate" content="VIERNES 03/07 15:00">
+  <meta itemprop="startDate" content="SEXTA 03/07 15:00">
   <div class="card-inner">
     <div class="card-info">
       <div class="origin-badge">Australia</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Australia">
-          <img src="../../fut/img/australia.png" alt="Australia shield" class="t-logo" loading="lazy">
-          <span class="t-name">Australia</span>
+          <meta itemprop="name" content="Austrália">
+          <img src="../../fut/img/australia.png" alt="Austrália shield" class="t-logo" loading="lazy">
+          <span class="t-name">Austrália</span>
         </div>
         <div class="vs-block">
           <span class="vs">VS</span>
-          <div class="dt-stack"><span class="dt-date">VIERNES</span><span class="dt-time">03/07 15:00</span></div>
+          <div class="dt-stack"><span class="dt-date">SEXTA</span><span class="dt-time">03/07 15:00</span></div>
         </div>
         <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Egipto">
-          <img src="../../fut/img/egito.png" alt="Egipto shield" class="t-logo" loading="lazy">
-          <span class="t-name">Egipto</span>
+          <meta itemprop="name" content="Egito">
+          <img src="../../fut/img/egito.png" alt="Egito shield" class="t-logo" loading="lazy">
+          <span class="t-name">Egito</span>
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/australia-australia-vs-egipto-es.jpg','Australia vs Egipto',4)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/australia-australia-vs-egito-ar.jpg','Austrália vs Egito',4)">
           <canvas id="flyerCanvas-4" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-4" src="../../jogos/img/australia-australia-vs-egipto-es.jpg" data-original-src="../../jogos/img/australia-australia-vs-egipto-es.jpg" style="max-height:140px;"
-            alt="Flyer Australia vs Egipto - Copa Mundial - VIERNES 03/07 15:00"
+          <img id="flyerPreview-4" src="../../jogos/img/australia-australia-vs-egito-ar.jpg" data-original-src="../../jogos/img/australia-australia-vs-egito-ar.jpg" style="max-height:140px;"
+            alt="Flyer Austrália vs Egito - World Cup - SEXTA 03/07 15:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(4, this)" aria-label="Generar con Bar Australia vs Egipto">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(4, this)" aria-label="Generate with Bar Austrália vs Egito">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -442,13 +442,13 @@
 </article>
 
 <article class="jogo-card" id="jogo-5" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="Argentina vs Cabo Verde - Copa Mundial">
+  <meta itemprop="name" content="Argentina vs Cabo Verde - World Cup">
   <meta itemprop="sport" content="Soccer">
-  <meta itemprop="startDate" content="VIERNES 03/07 19:00">
+  <meta itemprop="startDate" content="SEXTA 03/07 19:00">
   <div class="card-inner">
     <div class="card-info">
       <div class="origin-badge">Argentina</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
           <meta itemprop="name" content="Argentina">
@@ -457,7 +457,7 @@
         </div>
         <div class="vs-block">
           <span class="vs">VS</span>
-          <div class="dt-stack"><span class="dt-date">VIERNES</span><span class="dt-time">03/07 19:00</span></div>
+          <div class="dt-stack"><span class="dt-date">SEXTA</span><span class="dt-time">03/07 19:00</span></div>
         </div>
         <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
           <meta itemprop="name" content="Cabo Verde">
@@ -466,25 +466,25 @@
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/argentina-argentina-vs-cabo-verde-es.jpg','Argentina vs Cabo Verde',5)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/argentina-argentina-vs-cabo-verde-ar.jpg','Argentina vs Cabo Verde',5)">
           <canvas id="flyerCanvas-5" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-5" src="../../jogos/img/argentina-argentina-vs-cabo-verde-es.jpg" data-original-src="../../jogos/img/argentina-argentina-vs-cabo-verde-es.jpg" style="max-height:140px;"
-            alt="Flyer Argentina vs Cabo Verde - Copa Mundial - VIERNES 03/07 19:00"
+          <img id="flyerPreview-5" src="../../jogos/img/argentina-argentina-vs-cabo-verde-ar.jpg" data-original-src="../../jogos/img/argentina-argentina-vs-cabo-verde-ar.jpg" style="max-height:140px;"
+            alt="Flyer Argentina vs Cabo Verde - World Cup - SEXTA 03/07 19:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(5, this)" aria-label="Generar con Bar Argentina vs Cabo Verde">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(5, this)" aria-label="Generate with Bar Argentina vs Cabo Verde">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -492,49 +492,49 @@
 </article>
 
 <article class="jogo-card" id="jogo-6" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="Colombia vs Ghana - Copa Mundial">
+  <meta itemprop="name" content="Colômbia vs Gana - World Cup">
   <meta itemprop="sport" content="Soccer">
-  <meta itemprop="startDate" content="VIERNES 03/07 22:30">
+  <meta itemprop="startDate" content="SEXTA 03/07 22:30">
   <div class="card-inner">
     <div class="card-info">
       <div class="origin-badge">Colombia</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Colombia">
-          <img src="../../fut/img/colombia.png" alt="Colombia shield" class="t-logo" loading="lazy">
-          <span class="t-name">Colombia</span>
+          <meta itemprop="name" content="Colômbia">
+          <img src="../../fut/img/colombia.png" alt="Colômbia shield" class="t-logo" loading="lazy">
+          <span class="t-name">Colômbia</span>
         </div>
         <div class="vs-block">
           <span class="vs">VS</span>
-          <div class="dt-stack"><span class="dt-date">VIERNES</span><span class="dt-time">03/07 22:30</span></div>
+          <div class="dt-stack"><span class="dt-date">SEXTA</span><span class="dt-time">03/07 22:30</span></div>
         </div>
         <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Ghana">
-          <img src="../../fut/img/gana.png" alt="Ghana shield" class="t-logo" loading="lazy">
-          <span class="t-name">Ghana</span>
+          <meta itemprop="name" content="Gana">
+          <img src="../../fut/img/gana.png" alt="Gana shield" class="t-logo" loading="lazy">
+          <span class="t-name">Gana</span>
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/colombia-colombia-vs-ghana-es.jpg','Colombia vs Ghana',6)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/colombia-colombia-vs-gana-ar.jpg','Colômbia vs Gana',6)">
           <canvas id="flyerCanvas-6" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-6" src="../../jogos/img/colombia-colombia-vs-ghana-es.jpg" data-original-src="../../jogos/img/colombia-colombia-vs-ghana-es.jpg" style="max-height:140px;"
-            alt="Flyer Colombia vs Ghana - Copa Mundial - VIERNES 03/07 22:30"
+          <img id="flyerPreview-6" src="../../jogos/img/colombia-colombia-vs-gana-ar.jpg" data-original-src="../../jogos/img/colombia-colombia-vs-gana-ar.jpg" style="max-height:140px;"
+            alt="Flyer Colômbia vs Gana - World Cup - SEXTA 03/07 22:30"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(6, this)" aria-label="Generar con Bar Colombia vs Ghana">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(6, this)" aria-label="Generate with Bar Colômbia vs Gana">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -542,13 +542,13 @@
 </article>
 
 <article class="jogo-card" id="jogo-7" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="Canadá vs Marruecos - Copa Mundial">
+  <meta itemprop="name" content="Canadá vs Marrocos - World Cup">
   <meta itemprop="sport" content="Soccer">
   <meta itemprop="startDate" content="SÁB, 04/07 14:00">
   <div class="card-inner">
     <div class="card-info">
-      <div class="origin-badge">Marruecos</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="origin-badge">Marrocos</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
           <meta itemprop="name" content="Canadá">
@@ -560,31 +560,31 @@
           <div class="dt-stack"><span class="dt-date">SÁB,</span><span class="dt-time">04/07 14:00</span></div>
         </div>
         <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Marruecos">
-          <img src="../../fut/img/marrocos.png" alt="Marruecos shield" class="t-logo" loading="lazy">
-          <span class="t-name">Marruecos</span>
+          <meta itemprop="name" content="Marrocos">
+          <img src="../../fut/img/marrocos.png" alt="Marrocos shield" class="t-logo" loading="lazy">
+          <span class="t-name">Marrocos</span>
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/marrocos-canada-vs-marruecos-es.jpg','Canadá vs Marruecos',7)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/marrocos-canada-vs-marrocos-ar.jpg','Canadá vs Marrocos',7)">
           <canvas id="flyerCanvas-7" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-7" src="../../jogos/img/marrocos-canada-vs-marruecos-es.jpg" data-original-src="../../jogos/img/marrocos-canada-vs-marruecos-es.jpg" style="max-height:140px;"
-            alt="Flyer Canadá vs Marruecos - Copa Mundial - SÁB, 04/07 14:00"
+          <img id="flyerPreview-7" src="../../jogos/img/marrocos-canada-vs-marrocos-ar.jpg" data-original-src="../../jogos/img/marrocos-canada-vs-marrocos-ar.jpg" style="max-height:140px;"
+            alt="Flyer Canadá vs Marrocos - World Cup - SÁB, 04/07 14:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(7, this)" aria-label="Generar con Bar Canadá vs Marruecos">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(7, this)" aria-label="Generate with Bar Canadá vs Marrocos">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -592,49 +592,49 @@
 </article>
 
 <article class="jogo-card" id="jogo-8" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="Paraguay vs Francia - Copa Mundial">
+  <meta itemprop="name" content="Paraguai vs França - World Cup">
   <meta itemprop="sport" content="Soccer">
   <meta itemprop="startDate" content="SÁB, 04/07 18:00">
   <div class="card-inner">
     <div class="card-info">
-      <div class="origin-badge">Paraguay</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="origin-badge">Paraguai</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Paraguay">
-          <img src="../../fut/img/paraguai.png" alt="Paraguay shield" class="t-logo" loading="lazy">
-          <span class="t-name">Paraguay</span>
+          <meta itemprop="name" content="Paraguai">
+          <img src="../../fut/img/paraguai.png" alt="Paraguai shield" class="t-logo" loading="lazy">
+          <span class="t-name">Paraguai</span>
         </div>
         <div class="vs-block">
           <span class="vs">VS</span>
           <div class="dt-stack"><span class="dt-date">SÁB,</span><span class="dt-time">04/07 18:00</span></div>
         </div>
         <div class="team" itemprop="awayTeam" itemscope itemtype="https://schema.org/SportsTeam">
-          <meta itemprop="name" content="Francia">
-          <img src="../../fut/img/franca.png" alt="Francia shield" class="t-logo" loading="lazy">
-          <span class="t-name">Francia</span>
+          <meta itemprop="name" content="França">
+          <img src="../../fut/img/franca.png" alt="França shield" class="t-logo" loading="lazy">
+          <span class="t-name">França</span>
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/paraguai-paraguay-vs-francia-es.jpg','Paraguay vs Francia',8)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/paraguai-paraguai-vs-franca-ar.jpg','Paraguai vs França',8)">
           <canvas id="flyerCanvas-8" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-8" src="../../jogos/img/paraguai-paraguay-vs-francia-es.jpg" data-original-src="../../jogos/img/paraguai-paraguay-vs-francia-es.jpg" style="max-height:140px;"
-            alt="Flyer Paraguay vs Francia - Copa Mundial - SÁB, 04/07 18:00"
+          <img id="flyerPreview-8" src="../../jogos/img/paraguai-paraguai-vs-franca-ar.jpg" data-original-src="../../jogos/img/paraguai-paraguai-vs-franca-ar.jpg" style="max-height:140px;"
+            alt="Flyer Paraguai vs França - World Cup - SÁB, 04/07 18:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(8, this)" aria-label="Generar con Bar Paraguay vs Francia">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(8, this)" aria-label="Generate with Bar Paraguai vs França">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -642,13 +642,13 @@
 </article>
 
 <article class="jogo-card" id="jogo-9" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="Brasil vs Noruega - Copa Mundial">
+  <meta itemprop="name" content="Brasil vs Noruega - World Cup">
   <meta itemprop="sport" content="Soccer">
   <meta itemprop="startDate" content="DOM, 05/07 17:00">
   <div class="card-inner">
     <div class="card-info">
       <div class="origin-badge">Brasil</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
           <meta itemprop="name" content="Brasil">
@@ -666,25 +666,25 @@
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/brasil-brasil-vs-noruega-es.jpg','Brasil vs Noruega',9)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/brasil-brasil-vs-noruega-ar.jpg','Brasil vs Noruega',9)">
           <canvas id="flyerCanvas-9" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-9" src="../../jogos/img/brasil-brasil-vs-noruega-es.jpg" data-original-src="../../jogos/img/brasil-brasil-vs-noruega-es.jpg" style="max-height:140px;"
-            alt="Flyer Brasil vs Noruega - Copa Mundial - DOM, 05/07 17:00"
+          <img id="flyerPreview-9" src="../../jogos/img/brasil-brasil-vs-noruega-ar.jpg" data-original-src="../../jogos/img/brasil-brasil-vs-noruega-ar.jpg" style="max-height:140px;"
+            alt="Flyer Brasil vs Noruega - World Cup - DOM, 05/07 17:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(9, this)" aria-label="Generar con Bar Brasil vs Noruega">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(9, this)" aria-label="Generate with Bar Brasil vs Noruega">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -692,13 +692,13 @@
 </article>
 
 <article class="jogo-card" id="jogo-10" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="México vs Inglaterra - Copa Mundial">
+  <meta itemprop="name" content="México vs Inglaterra - World Cup">
   <meta itemprop="sport" content="Soccer">
   <meta itemprop="startDate" content="DOM, 05/07 21:00">
   <div class="card-inner">
     <div class="card-info">
-      <div class="origin-badge">México</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="origin-badge">Mexico</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
           <meta itemprop="name" content="México">
@@ -716,25 +716,25 @@
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/mexico-mexico-vs-inglaterra-es.jpg','México vs Inglaterra',10)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/mexico-mexico-vs-inglaterra-ar.jpg','México vs Inglaterra',10)">
           <canvas id="flyerCanvas-10" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-10" src="../../jogos/img/mexico-mexico-vs-inglaterra-es.jpg" data-original-src="../../jogos/img/mexico-mexico-vs-inglaterra-es.jpg" style="max-height:140px;"
-            alt="Flyer México vs Inglaterra - Copa Mundial - DOM, 05/07 21:00"
+          <img id="flyerPreview-10" src="../../jogos/img/mexico-mexico-vs-inglaterra-ar.jpg" data-original-src="../../jogos/img/mexico-mexico-vs-inglaterra-ar.jpg" style="max-height:140px;"
+            alt="Flyer México vs Inglaterra - World Cup - DOM, 05/07 21:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(10, this)" aria-label="Generar con Bar México vs Inglaterra">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(10, this)" aria-label="Generate with Bar México vs Inglaterra">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -742,13 +742,13 @@
 </article>
 
 <article class="jogo-card" id="jogo-11" itemscope itemtype="https://schema.org/SportsEvent">
-  <meta itemprop="name" content="Estados Unidos vs Bélgica - Copa Mundial">
+  <meta itemprop="name" content="Estados Unidos vs Bélgica - World Cup">
   <meta itemprop="sport" content="Soccer">
   <meta itemprop="startDate" content="SEG, 06/07 21:00">
   <div class="card-inner">
     <div class="card-info">
       <div class="origin-badge">Estados Unidos</div>
-      <div class="camp-badge"><span class="bdot"></span>Copa Mundial</div>
+      <div class="camp-badge"><span class="bdot"></span>World Cup</div>
       <div class="matchup">
         <div class="team" itemprop="homeTeam" itemscope itemtype="https://schema.org/SportsTeam">
           <meta itemprop="name" content="Estados Unidos">
@@ -766,25 +766,25 @@
         </div>
       </div>
       <div class="card-pills">
-        <span class="pill">Optimizado para Instagram Story</span>
-        <span class="pill">Descarga y comparte en cualquier plataforma</span>
-        <span class="pill">100% Gratis</span>
+        <span class="pill">Optimized for Instagram Story</span>
+        <span class="pill">Download & Share on any platform</span>
+        <span class="pill">100% Free</span>
       </div>
     </div>
     <div class="card-flyer">
           
-        <div class="flyer-wrap" onclick="openLB('../../jogos/img/estados-unidos-estados-unidos-vs-belgica-es.jpg','Estados Unidos vs Bélgica',11)">
+        <div class="flyer-wrap" onclick="openLB('../../jogos/img/estados-unidos-estados-unidos-vs-belgica-ar.jpg','Estados Unidos vs Bélgica',11)">
           <canvas id="flyerCanvas-11" width="1080" height="1920" style="display:none; max-height:140px; width:auto;"></canvas>
-          <img id="flyerPreview-11" src="../../jogos/img/estados-unidos-estados-unidos-vs-belgica-es.jpg" data-original-src="../../jogos/img/estados-unidos-estados-unidos-vs-belgica-es.jpg" style="max-height:140px;"
-            alt="Flyer Estados Unidos vs Bélgica - Copa Mundial - SEG, 06/07 21:00"
+          <img id="flyerPreview-11" src="../../jogos/img/estados-unidos-estados-unidos-vs-belgica-ar.jpg" data-original-src="../../jogos/img/estados-unidos-estados-unidos-vs-belgica-ar.jpg" style="max-height:140px;"
+            alt="Flyer Estados Unidos vs Bélgica - World Cup - SEG, 06/07 21:00"
             class="flyer-img" loading="lazy" width="1080" height="1920">
-          <div class="flyer-hov">Haz clic para ampliar</div>
+          <div class="flyer-hov">Click to zoom</div>
         </div>
-        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(11, this)" aria-label="Generar con Bar Estados Unidos vs Bélgica">
+        <button class="btn-dl btn-dl-free" onclick="handleGenerateBtn(11, this)" aria-label="Generate with Bar Estados Unidos vs Bélgica">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Generar con Bar
+          Generate with Bar
         </button>
       
     </div>
@@ -794,7 +794,7 @@
 </main>
 
 <footer>
-  <p>&copy; 2026 <a href="https://atendemidia.com.br">AtendeMidia</a> - Calendario de Partidos de la Copa Mundial - Descarga flyers gratis para tu bar</p>
+  <p>&copy; 2026 <a href="https://atendemidia.com.br">AtendeMidia</a> - </p>
 </footer>
 
 <script>
@@ -803,27 +803,27 @@ const WEBHOOK_URL = 'COLE_SEU_WEBHOOK_URL_AQUI';
 
 // ===== TRANSLATIONS =====
 const T = {
-  popupLeadTitle: 'Personaliza Tus Flyers',
-  popupLeadSub: 'Agrega el nombre y dirección de tu bar en todos los flyers',
-  popupEmailLabel: 'Correo electrónico *',
-  popupEmailPlaceholder: 'tu@email.com',
-  popupPhoneLabel: 'WhatsApp',
-  popupPhonePlaceholder: '(11) 99999-9999',
-  popupBarLabel: 'Nombre del Bar *',
-  popupBarPlaceholder: 'Escribe el nombre de tu bar',
-  popupAddressLabel: 'Dirección *',
-  popupAddressPlaceholder: 'Calle, número, barrio, ciudad',
-  popupSubmitBtn: '✅ Personalizar & Descargar',
-  popupSkipBtn: 'Saltar, lo haré después',
-  popupSecureNote: '🔒 Tus datos están seguros. No compartimos con terceros.',
-  popupToastSaving: '⏳ Guardando tus datos...',
-  popupToastSuccess: '✅ ¡Datos guardados! Flyers personalizados listos!',
-  popupAlertEmail: 'Por favor, ingresa tu correo electrónico',
-  popupAlertBar: 'Por favor, ingresa el nombre de tu bar',
-  popupAlertAddress: 'Por favor, ingresa tu dirección',
-  downloadAllProgress: 'Descargando {current}/{total}...',
-  downloadAllDone: '¡Todos os flyers foram descargados!',
-  downloadAllNeedData: 'Completa los datos de tu bar primeiro.'
+  popupLeadTitle: 'Customize',
+  popupLeadSub: '',
+  popupEmailLabel: 'Email',
+  popupEmailPlaceholder: '',
+  popupPhoneLabel: 'Phone',
+  popupPhonePlaceholder: '',
+  popupBarLabel: 'Bar Name',
+  popupBarPlaceholder: '',
+  popupAddressLabel: 'Address',
+  popupAddressPlaceholder: '',
+  popupSubmitBtn: 'Save',
+  popupSkipBtn: 'Skip',
+  popupSecureNote: '',
+  popupToastSaving: 'Saving...',
+  popupToastSuccess: 'Success!',
+  popupAlertEmail: 'Enter email',
+  popupAlertBar: 'Enter bar name',
+  popupAlertAddress: 'Enter address',
+  downloadAllProgress: 'تحميل {current}/{total}...',
+  downloadAllDone: 'تم تحميل جميع المنشورات!',
+  downloadAllNeedData: 'يرجى ملء معلومات الحانة أولاً.'
 };
 
 // ===== TOAST =====
